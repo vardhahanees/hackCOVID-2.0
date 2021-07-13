@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Services",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Location": {
+      "type": "text"
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "StopDate": {
+      "type": "date"
+    },
+    "Urgency": {
+      "type": "integer"
+    },
+    "user_services": {
+      "via": "services",
+      "collection": "user-service"
+    }
+  }
+}

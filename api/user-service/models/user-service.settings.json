@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_services",
+  "info": {
+    "name": "UserService",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "user_services",
+      "dominant": true
+    },
+    "services": {
+      "collection": "services",
+      "via": "user_services",
+      "dominant": true
+    }
+  }
+}
